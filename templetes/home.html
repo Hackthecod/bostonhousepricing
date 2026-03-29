@@ -7,5 +7,54 @@
 </head>
 <body>
     <h1>Home Page</h1>
+
+    <!-- Main Input Form -->
+    <form action="/predict" method="post">
+        <label for="crim">Crim:</label>
+        <input type="number" id="crim" placeholder="CRIM" name="crim" step="0.01"><br>
+
+        <label for="zn">Zn:</label>
+        <input type="number" id="zn" placeholder="ZN" name="zn" step="0.01"><br>
+
+        <label for="indus">Indus:</label>
+        <input type="number" id="indus" placeholder="INDUS" name="indus" step="0.01"><br>
+
+        <label for="chas">Chas:</label>
+        <input type="number" id="chas" placeholder="CHAS" name="chas" step="0.01"><br>
+
+        <label for="nox">Nox:</label>
+        <input type="number" id="nox" placeholder="NOX" name="nox" step="0.01"><br>
+
+        <label for="rm">Rm:</label>
+        <input type="number" id="rm" placeholder="RM" name="rm" step="0.01"><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="AGE" name="age" step="0.01"><br>
+
+        <label for="dis">Dis:</label>
+        <input type="number" id="dis" placeholder="DIS" name="dis" step="0.01"><br>
+
+        <label for="rad">Rad:</label>
+        <input type="number" id="rad" placeholder="RAD" name="rad" step="1"><br>
+
+        <label for="tax">Tax:</label>
+        <input type="number" id="tax" placeholder="TAX" name="tax" step="1"><br>
+
+        <label for="ptratio">Ptratio:</label>
+        <input type="number" id="ptratio" placeholder="PTRATIO" name="ptratio" step="1"><br>
+
+        <label for="black">Black:</label>
+        <input type="number" id="black" placeholder="BLACK" name="black" step="1"><br>
+
+        <label for="lstat">Lstat:</label>
+        <input type="number" id="lstat" placeholder="LSTAT" name="lstat" step="1"><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <!-- Prediction Result -->
+    {% if prediction_text %}
+        <p>{{ prediction_text }}</p>
+    {% endif %}
 </body>
 </html>
